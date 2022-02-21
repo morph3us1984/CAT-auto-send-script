@@ -1,4 +1,5 @@
 #!/bin/bash
+#Comment with # if you are not interested in every detail
 set -o xtrace
 echo "Send out script started:"
 date
