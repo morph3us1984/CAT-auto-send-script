@@ -31,10 +31,12 @@ do
                                                 echo  -e "${YELLOW}SEND Wallet not ready...${NC}"
                                                 sleep 10s
                                         done
-                                        testvar=$(chia wallet send -f "$FINGERPRINT" -i 5 -a "1" -t "$TARGETADDRESS" -m "$FEE" | grep -o "Exception")
+                                        output=$(chia wallet send -f "$FINGERPRINT" -i $ID -a "1" -t "$TARGETADDRESS" -m "$FEE")
+                                        testvar=$(echo $output| grep -o "Exception")
                                         if [ -n "$testvar" ]
                                         then
                                                 echo -e "${RED}Error sending out PAYMENT, trying again...${NC}"
+                                                echo -e "Error: ${output}"
                                                 sleep 10s
                                         elif [ -z "$testvar" ]
                                         then
