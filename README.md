@@ -1,21 +1,6 @@
 # CAT auto send script
 
-definition here
-
-```
-CAT-auto-send-script
-│   README.md  ←  You are here
-│   app.js  ←  Main bot code    
-│
-└───subfolder
-│   │   another file
-│   │   another one
-```
-
-## Usage
-
-1. Change variables...
-2. ```comand goes here```
+Configuration section can be found within the bash script.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
